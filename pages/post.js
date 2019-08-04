@@ -35,6 +35,7 @@ Post.getInitialProps = async props => {
   const id = props.req ? props.req.query.id : props.query.id
 
   const { data } = await axios.get(`https://netlify-json-api.netlify.com/posts/${id}`)
+  console.log(data);
 
   return { post: data }
 }
